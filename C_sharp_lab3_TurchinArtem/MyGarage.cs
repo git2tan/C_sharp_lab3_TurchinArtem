@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace C_sharp_lab3_TurchinArtem
@@ -41,11 +35,11 @@ namespace C_sharp_lab3_TurchinArtem
 
         private void MyGarage_Load_1(object sender, EventArgs e)
         {
-            CargoCar firstCar = new CargoCar(Marks.toyota, 150, 400000, 0.4);
-            myListOfCar.Add(firstCar);
-            firstCar.RepairNow("Что-то", 10000);
+            //CargoCar firstCar = new CargoCar(Marks.toyota, 150, 400000, 0.4);
+            //myListOfCar.Add(firstCar);
+            //firstCar.RepairNow("Что-то", 10000);
             refreshListBoxOfCar();
-            listBox1.SelectedIndex = 0;
+            //listBox1.SelectedIndex = 0;
         }
 
         private void btnDel_Click(object sender, EventArgs e)
@@ -75,16 +69,17 @@ namespace C_sharp_lab3_TurchinArtem
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            int i = listBox1.SelectedIndex;
-            CargoCar tmpCar = myListOfCar[i];
-            EditFormDialog editDlg = new EditFormDialog();
-            editDlg.Number = i;
-            editDlg.Marka = (int)tmpCar.Marka;
-            editDlg.MaxCargo = tmpCar.MaxCargoWeight;
+            int i = listBox1.SelectedIndex;             //запомнил индекс который выбрал в списке
+            CargoCar tmpCar = myListOfCar[i];           // создал ссылку и направил ее на объект из списка в соотв.с индексом
+            EditFormDialog editDlg = new EditFormDialog();//создал объект подчиненной формы
+            //провожу инициализацию полей формы до того как вывести ее на экран
+            editDlg.Number = i; //у подч формы есть поле-свойство Number ему передал индекс
+            editDlg.Marka = (int)tmpCar.Marka;  //это марка авто
+            editDlg.MaxCargo = tmpCar.MaxCargoWeight;   //это грузоподъемн
             editDlg.Price = tmpCar.Price;
             editDlg.Power = tmpCar.Power;
-            editDlg.ListOfRepair = tmpCar.ListOfRepairsDate;
-            editDlg.ShowDialog();
+            editDlg.ListOfRepair = tmpCar.ListOfRepairsDate;    //устанавливаю ссылку на список
+            editDlg.ShowDialog();   //вывожу форму
             if (editDlg.DialogResult==DialogResult.OK)
             {
                 tmpCar.Marka = (Marks)editDlg.Marka;

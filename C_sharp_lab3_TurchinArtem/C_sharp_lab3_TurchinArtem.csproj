@@ -67,12 +67,6 @@
     <Compile Include="EditFormDialog.Designer.cs">
       <DependentUpon>EditFormDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditListForm.Designer.cs">
-      <DependentUpon>EditListForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="ITuningable.cs" />
     <Compile Include="Marks.cs" />
     <Compile Include="MyGarage.cs">
@@ -91,9 +85,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditFormDialog.resx">
       <DependentUpon>EditFormDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditListForm.resx">
-      <DependentUpon>EditListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyGarage.resx">
       <DependentUpon>MyGarage.cs</DependentUpon>
