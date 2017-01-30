@@ -134,7 +134,7 @@ namespace C_sharp_lab3_TurchinArtem
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
+        { 
             if (checkBox1.Checked)
             {
                 listOfRepairs.Visible = true;
@@ -145,6 +145,18 @@ namespace C_sharp_lab3_TurchinArtem
             }
             else
                 listOfRepairs.Visible = false;
+        }
+
+        private void repairsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (repairsToolStripMenuItem.Checked)
+            {
+                checkBox1.Checked = true;
+            }
+            else
+            {
+                checkBox1.Checked = false;
+            }
         }
     }
 }
