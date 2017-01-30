@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace C_sharp_lab3_TurchinArtem
 {
-    public partial class Form1 : Form
+    public partial class EditListForm : Form
     {
-        public Form1()
+        public EditListForm()
         {
             InitializeComponent();
         }

@@ -46,14 +46,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AddDateOfRepairDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AddDateOfRepairDialog.Designer.cs">
+      <DependentUpon>AddDateOfRepairDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDialogForm.Designer.cs">
+      <DependentUpon>AddDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car.cs" />
+    <Compile Include="CargoCar.cs" />
+    <Compile Include="DateOfRepair.cs" />
+    <Compile Include="EditFormDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFormDialog.Designer.cs">
+      <DependentUpon>EditFormDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditListForm.Designer.cs">
+      <DependentUpon>EditListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ITuningable.cs" />
+    <Compile Include="Marks.cs" />
+    <Compile Include="MyGarage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyGarage.Designer.cs">
+      <DependentUpon>MyGarage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddDateOfRepairDialog.resx">
+      <DependentUpon>AddDateOfRepairDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDialogForm.resx">
+      <DependentUpon>AddDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFormDialog.resx">
+      <DependentUpon>EditFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditListForm.resx">
+      <DependentUpon>EditListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyGarage.resx">
+      <DependentUpon>MyGarage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
