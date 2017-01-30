@@ -119,32 +119,39 @@ namespace C_sharp_lab3_TurchinArtem
         }
         private void refreshListOfRepair()
         {
-            if(listBox1.SelectedIndex!=-1)
+            listOfRepairs.Items.Clear();
+            if (listBox1.SelectedIndex!=-1)
             {
-                listOfRepairs.Items.Clear();
-                foreach(DateOfRepair each in myListOfCar[listBox1.SelectedIndex].ListOfRepairsDate)
-                {
-                    listOfRepairs.Items.Add(each.ToString());
-                }
+                if(myListOfCar[listBox1.SelectedIndex].ListOfRepairsDate.Count>0)
+                    foreach(DateOfRepair each in myListOfCar[listBox1.SelectedIndex].ListOfRepairsDate)
+                    {
+                        listOfRepairs.Items.Add(each.ToString());
+                    }
+                else
+                    listOfRepairs.Items.Add("Ремонты не производились");
             }
             else
             {
-                listOfRepairs.Items.Clear();
+                listOfRepairs.Items.Add("Выберите авто для отображения списка ремонтов");
             }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        { 
+        {
             if (checkBox1.Checked)
             {
                 listOfRepairs.Visible = true;
-                if (listBox1.SelectedIndex!=-1)
+                if (listBox1.SelectedIndex != -1)
                 {
                     refreshListOfRepair();
                 }
+                repairsToolStripMenuItem.Checked = true;
             }
             else
+            {
                 listOfRepairs.Visible = false;
+                repairsToolStripMenuItem.Checked = false;
+            }
         }
 
         private void repairsToolStripMenuItem_Click(object sender, EventArgs e)
