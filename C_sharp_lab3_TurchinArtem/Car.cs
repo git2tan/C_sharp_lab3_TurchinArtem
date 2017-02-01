@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_sharp_lab3_TurchinArtem
 {
-    abstract class Car : ITuningable
+    public abstract class Car : ITuningable
     {
         private Marks marka;    //марка авто (перечислитель)
         private int power;      //мощность авто

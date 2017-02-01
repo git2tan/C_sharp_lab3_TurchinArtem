@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_sharp_lab3_TurchinArtem
 {
-    enum Marks
+    public enum Marks
     {
         toyota, mazda, bentley, bmw, audi, mitsubishi
     }

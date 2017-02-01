@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace C_sharp_lab3_TurchinArtem
@@ -13,7 +14,8 @@ namespace C_sharp_lab3_TurchinArtem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MyGarage());
+            List<CargoCar> myListOfCar = new List<CargoCar>();
+            Application.Run(new MyGarage(myListOfCar));
         }
     }
 }

@@ -6,11 +6,12 @@ namespace C_sharp_lab3_TurchinArtem
 {
     public partial class MyGarage : Form
     {
-        List<CargoCar> myListOfCar = new List<CargoCar>();
+        List<CargoCar> myListOfCar;
         
 
-        public MyGarage()
+        public MyGarage(List<CargoCar> myListOfCar)
         {
+            this.myListOfCar = myListOfCar;
             InitializeComponent();
         }
 
@@ -133,6 +134,7 @@ namespace C_sharp_lab3_TurchinArtem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            checkBox1.Checked = !checkBox1.Checked;
             if (checkBox1.Checked)
             {
                 listOfRepairs.Visible = true;
@@ -144,6 +146,7 @@ namespace C_sharp_lab3_TurchinArtem
             }
             else
             {
+                //repairsToolStripMenuItem_Click(sender, e);
                 listOfRepairs.Visible = false;
                 repairsToolStripMenuItem.Checked = false;
             }

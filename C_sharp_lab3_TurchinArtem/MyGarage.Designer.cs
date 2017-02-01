@@ -98,6 +98,7 @@
             // 
             // checkBox1
             // 
+            this.checkBox1.AutoCheck = false;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(27, 211);
             this.checkBox1.Name = "checkBox1";
@@ -105,7 +106,7 @@
             this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "отображать список ремонтов";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.Click += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // listOfRepairs
             // 
@@ -140,14 +141,14 @@
             // addNewCarToolStripMenuItem
             // 
             this.addNewCarToolStripMenuItem.Name = "addNewCarToolStripMenuItem";
-            this.addNewCarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addNewCarToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.addNewCarToolStripMenuItem.Text = "add new car";
             this.addNewCarToolStripMenuItem.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.exitToolStripMenuItem.Text = "exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -165,7 +166,7 @@
             this.repairsToolStripMenuItem.Name = "repairsToolStripMenuItem";
             this.repairsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.repairsToolStripMenuItem.Text = "список ремонтов";
-            this.repairsToolStripMenuItem.Click += new System.EventHandler(this.repairsToolStripMenuItem_Click);
+            this.repairsToolStripMenuItem.Click += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // editToolStripMenuItem
             // 

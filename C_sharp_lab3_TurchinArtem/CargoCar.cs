@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_sharp_lab3_TurchinArtem
 {
-    class CargoCar : Car          //создаем класс-наследник грузовой авто
+    public class CargoCar : Car          //создаем класс-наследник грузовой авто
     {
         private double maxCargoWeight;  //у грузового авто имеется характеристика г.п.
 
